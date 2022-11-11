@@ -1,0 +1,45 @@
+.page-main {
+    border-top: 1px solid #ececec;
+}
+
+.page-main__wrapper {
+    padding: 76px 0;
+    background-color: #f1f1f1;
+
+    @media (min-width: $md-width) {
+        padding: 105px 0;
+    }
+}
+
+.page-main__title {
+    margin: 0;
+    text-align: center;
+}
+
+.page-main__form {
+    padding-top: 30px;
+    padding-bottom: 56px;
+}
+
+@media (min-width: $md-width) {
+    .page-main {
+        position: relative;
+        top: -48px;
+    }
+
+    .page-main__wrapper {
+        position: relative;
+
+        &::after {
+            content: '';
+            height: 34px;
+            width: 100%;
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            background-image: url('../images/bg-zigzag-fill.svg');
+            background-repeat: repeat-x;
+            background-size: contain;
+        }
+    }
+}

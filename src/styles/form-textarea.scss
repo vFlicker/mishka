@@ -1,0 +1,22 @@
+.input-textarea {
+    width: 100%;
+    min-height: 142px;
+    padding: 18px;
+    border: 2px solid #000000;
+    color: #444444;
+    font-size: 17px;
+    line-height: 18px;
+    resize: none;
+
+    &::placeholder {
+        color: #444444;
+        opacity: 0.3;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        border: 2px solid #62d1ba;
+    }
+}

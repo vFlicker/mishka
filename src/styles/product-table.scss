@@ -1,0 +1,15 @@
+.product-table {
+    width: 100%;
+    color: #444444;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    border-collapse: collapse;
+}
+
+.product-table__name,
+.product-table__value {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+}

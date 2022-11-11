@@ -1,0 +1,97 @@
+.about-us {
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.about-us__title {
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.about-us__list {
+    @include reset-list;
+}
+
+.about-us__text {
+    margin: 0;
+}
+
+.about-us__item {
+    margin-bottom: 32px;
+    padding-top: 54px;
+    line-height: 20px;
+
+    background-repeat: no-repeat;
+
+    &--eco {
+        background-image: url('../images/icon-feature-flower.svg');
+        background-position: 9px top;
+    }
+    &--price {
+        background-image: url('../images/icon-feature-money.svg');
+        background-position: 0 top;
+    }
+    &--like {
+        background-image: url('../images/icon-feature-heart.svg');
+        background-position: 9px top;
+    }
+    &--hand-made {
+        background-image: url('../images/icon-feature-ball.svg');
+        background-position: 9px top;
+    }
+    &--native {
+        background-image: url('../images/icon-feature-rocket.svg');
+        background-position: 9px top;
+    }
+    &--pack {
+        background-image: url('../images/icon-feature-gift.svg');
+        background-position: 9px top;
+    }
+}
+
+@media (min-width: $md-width) {
+    .about-us {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
+    .about-us__title {
+        margin-bottom: 44px;
+    }
+
+    .about-us__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about-us__item {
+        flex: 0 0 240px;
+    }
+
+    .about-us__text {
+        width: 293px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .about-us {
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+
+    .about-us__wrapper {
+        margin-left: 174px;
+    }
+
+    .about-us__list {
+        justify-content: flex-start;
+    }
+
+    .about-us__item {
+        flex: 0 0 360px;
+    }
+}

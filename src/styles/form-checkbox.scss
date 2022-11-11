@@ -1,0 +1,53 @@
+.input-checkbox + .input-checkbox__label {
+    display: block;
+    padding: 9px 0;
+    padding-left: 64px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid #444444;
+
+        @media (min-width: $md-width) {
+            width: 52px;
+            height: 52px;
+        }
+    }
+
+    &:hover::before {
+        border: 2px solid #62d1ba;
+    }
+
+    &:active::before {
+        border: 2px solid #cccccc;
+    }
+}
+
+.input-checkbox:checked + .input-checkbox__label::after {
+    content: '';
+    width: 22px;
+    height: 16px;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    background-image: url('../images/icon-tick.svg');
+    background-size: cover;
+
+    @media (min-width: $md-width) {
+        width: 33px;
+        height: 22px;
+        top: 14px;
+        left: 11px;
+    }
+}
+
+.input-checkbox:focus + .input-checkbox__label::before {
+    border: 2px solid #62d1ba;
+}

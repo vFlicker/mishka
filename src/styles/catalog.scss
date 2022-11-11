@@ -1,0 +1,145 @@
+.catalog {
+    padding-top: 30px;
+}
+
+.catalog__list {
+    @include reset-list;
+}
+
+.catalog__item {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    &:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.product-card__image-link {
+    flex: 0 0 50%;
+    width: 260px;
+    height: 195px;
+    line-height: 0;
+}
+
+.product-card__info {
+    flex: 0 0 50%;
+    padding: 30px 28px;
+    border: 1px solid #ededed;
+    border-top: none;
+}
+
+.product-card__title {
+    margin: 0;
+}
+
+.product-card__link {
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.product-card__descr {
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+.product-card__price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    border-top: 1px solid #ededed;
+    align-items: center;
+    font-size: 15px;
+    line-height: 24px;
+    font-size: 17px;
+}
+
+.product-card__price {
+    svg {
+        opacity: 0.2;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            fill: #63d1bb;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
+
+@media (min-width: $md-width) {
+    .catalog__item {
+        display: flex;
+        flex-direction: row;
+        width: 670px;
+        min-height: 334px;
+        margin-bottom: 30px;
+    }
+
+    .product-card__image-link {
+        width: 334px;
+        height: 334px;
+    }
+
+    .product-card__info {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid #ededed;
+    }
+
+    .product-card__price {
+        font-size: 17px;
+        margin-top: auto;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .catalog__list {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 316px;
+        margin-right: -25px;
+        margin-left: -25px;
+    }
+
+    .catalog__item {
+        display: flex;
+        flex-direction: column;
+        width: 316px;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    .product-card__image-link {
+        width: 316px;
+        height: 462px;
+    }
+
+    .product-card__info {
+        display: flex;
+        flex-direction: column;
+        min-width: 316px;
+        min-height: 201px;
+        border-top: 1px solid #ededed;
+    }
+
+    .product-card__price {
+        font-size: 17px;
+        margin-top: auto;
+    }
+}

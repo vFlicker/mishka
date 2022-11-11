@@ -1,0 +1,59 @@
+.modal__title {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal__sub-title {
+    font-weight: 400;
+}
+
+.modal__form {
+    width: 100%;
+}
+
+.modal-form__list {
+    @include reset-list;
+    display: flex;
+    justify-content: space-between;
+
+    .input-radio + .input-radio__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ececec;
+        padding: 10px 0;
+        transition: ease 0.2s;
+
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+
+    .input-radio:checked + .input-radio__label {
+        border: 2px solid #63d1bb;
+    }
+}
+
+.modal-form__radio-item {
+    flex-basis: 32%;
+}
+
+.modal__button {
+    margin-top: 32px;
+}
+
+@media (min-width: $md-width) {
+    .modal__title {
+        font-size: 30px;
+        line-height: 38px;
+        br {
+            display: none;
+        }
+    }
+
+    .modal__button {
+        width: 100%;
+    }
+}

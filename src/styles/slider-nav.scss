@@ -1,0 +1,44 @@
+.slider-nav {
+    display: flex;
+}
+
+.slider-nav__arrow {
+    width: 130px;
+    height: 52px;
+    border: 1px solid #ececec;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.slider-nav__arrow--prev {
+    background-image: url('/images/icon-left-arrow.svg');
+}
+
+.slider-nav__arrow--next {
+    background-image: url('/images/icon-right-arrow.svg');
+}
+
+@media (min-width: $md-width) {
+    .slider-nav__arrow {
+        border: none;
+    }
+
+    .slider-nav__arrow {
+        width: 50px;
+        height: 26px;
+    }
+
+    .slider-nav__arrow--prev {
+        margin-right: 36px;
+    }
+}

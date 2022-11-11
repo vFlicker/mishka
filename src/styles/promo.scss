@@ -1,0 +1,138 @@
+.promo {
+    padding: 30px 0;
+}
+
+.promo__wrapper {
+    &:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.promo__title {
+    margin: 0;
+    padding: 30px;
+    padding-bottom: 26px;
+    padding-left: 90px;
+    position: relative;
+    border: 1px solid #ececec;
+    border-bottom: none;
+
+    &::before {
+        content: '';
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 34px;
+        left: 34px;
+        background-image: url('../images/icon-video.svg');
+    }
+}
+
+.promo__video {
+    width: 260px;
+    height: 150px;
+    position: relative;
+}
+
+.promo__video-play {
+    position: absolute;
+    width: 101px;
+    height: 77px;
+    margin-top: -38.5px;
+    margin-left: -50.5px;
+    left: 50%;
+    top: 50%;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:active {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+.promo__content {
+    padding: 34px;
+    border: 1px solid #ececec;
+    border-top: none;
+}
+
+.promo__descr {
+    margin: 0;
+}
+
+.promo__button {
+    margin-top: 30px;
+    padding: 11px 20px;
+}
+
+@media (min-width: $md-width) {
+    .promo__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .promo__video {
+        order: -1;
+        width: 668px;
+        height: 455px;
+    }
+
+    .promo__title {
+        border-top: none;
+        padding: 40px 42px 0 107px;
+        &::before {
+            top: 34px;
+        }
+    }
+
+    .promo__content {
+        padding: 40px 42px 46px 42px;
+    }
+
+    .promo__button {
+        margin-top: 40px;
+        width: 100%;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .promo__wrapper {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        border: 1px solid #ececec;
+    }
+
+    .promo__video {
+        flex-shrink: 0;
+        width: 682px;
+        height: 455px;
+    }
+
+    .promo__title {
+        max-width: 160px;
+        padding-left: 0;
+        padding-top: 56px;
+        position: absolute;
+        top: 48px;
+        right: 140px;
+        border: none;
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .promo__content {
+        padding: 186px 58px 0 80px;
+        border: none;
+    }
+}

@@ -1,0 +1,47 @@
+.button {
+    display: inline-block;
+    padding: 13px 40px;
+    position: relative;
+    color: #444444;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid #444444;
+    cursor: pointer;
+    transition: ease 0.2s;
+    @media (min-width: $sm-width) and (max-width: $md-width-max) {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: #444444;
+        color: #ffffff;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--large {
+        text-align: center;
+        width: 259px;
+        max-width: 100%;
+    }
+
+    &--green {
+        color: #ffffff;
+        background-color: #63d1bb;
+        border: none;
+        &:hover {
+            background-color: #59d5bc;
+        }
+    }
+
+    @media (min-width: $md-width) {
+        &--large {
+            width: 292px;
+        }
+    }
+}

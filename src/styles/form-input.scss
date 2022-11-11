@@ -1,0 +1,56 @@
+.input-text__wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.input-text__label {
+    order: -1;
+    margin-right: 42px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 14px 0;
+    padding-right: 33px;
+    border: none;
+    border-bottom: 2px solid #000000;
+
+    &::placeholder {
+        color: #444444;
+        opacity: 0.3;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid #62d1ba;
+    }
+
+    @media (min-width: $md-width) {
+        padding-left: 16px;
+    }
+}
+
+.input-text__image {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    opacity: 0.2;
+}
+
+.input-text:hover ~ .input-text__image {
+    fill: #62d1ba;
+    opacity: 1;
+}
+
+.input-text:focus ~ .input-text__image {
+    fill: #62d1ba;
+    opacity: 1;
+}
+
+@media (min-width: $md-width) {
+    .form__legend.input-text__legend {
+        margin-top: 0px;
+    }
+}
